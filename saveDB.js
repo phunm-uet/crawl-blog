@@ -18,13 +18,16 @@ var insertDB = function(dataObj,cateId){
         image : dataObj.filePath
     })
     .then(postId => {
-        conn('post_category').insert({
+        conn('post_category')
+        .returning('post_id')
+        .insert({
             category_id : cateId,
             post_id : postId
         })
+        .catch(err => {console.log(err)})
     })
-    .then(() => {
-        console.log(`Save thanh cong ${postId}`)
+    .then((postId) => {
+        console.log(`Save thanh cong ${dataObj.title}`)
     })
     .catch(err => {console.log(err.sqlMessage)})
 }

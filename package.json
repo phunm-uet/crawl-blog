@@ -16,6 +16,7 @@
     "mysql": "^2.15.0",
     "mysql2": "^1.5.1",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "slug": "^0.9.1"
   }
 }

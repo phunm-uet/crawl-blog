@@ -26,7 +26,10 @@ for(page = minPage; page <= maxPage; page++)
             .then(data => {
                 insertDB(data,CATE_ID)
             })
-            .catch(err => {})
+            .catch(err => {console.log(err)})
        })
-    })    
+    })
+    .catch(err => {
+        console.log(`Has error when crawl ${pageURL} `)
+    })
 }
