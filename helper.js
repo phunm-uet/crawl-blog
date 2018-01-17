@@ -52,7 +52,11 @@ var crawl = function(url,classBody,classRemove)
         })
     })
 }
-
+/**
+ * Function download image 
+ * @param {string} url 
+ * @param {string} filePath 
+ */
 var download = function(url,filePath){
     request(url).pipe(fs.createWriteStream(filePath))
 }

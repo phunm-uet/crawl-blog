@@ -15,6 +15,11 @@ var insertDB = async function(dataObj,cateId){
     }
 }
 
+/**
+ * Insert Post to posts table in databse
+ * @param {Object} dataObj 
+ * @return {Promise} postId
+ */
 var insertPost = function(dataObj){
     return new Promise((resolve,reject) => {
         conn('posts')
@@ -34,6 +39,11 @@ var insertPost = function(dataObj){
     })
 }
 
+/**
+ * Insert Post and Category to post_category table in database
+ * @param {int} postId 
+ * @param {int} cateId 
+ */
 var insertPostCate = function(postId,cateId){
     return new Promise((resolve ,reject) => {
         conn('post_category')
@@ -46,6 +56,10 @@ var insertPostCate = function(postId,cateId){
     })
 }
 
+/**
+ * Function insert new or get id of tag 
+ * @param {sting} tag 
+ */
 var insertTag = function(tag){
     return new Promise((resolve,reject) => {
         conn('tags')
@@ -69,6 +83,10 @@ var insertTag = function(tag){
         })
     })
 }
+/**
+ * insert array tags to tag table in databse
+ * @param {array} tags 
+ */
 var insertTags = function(tags){
     var tagIds = []
     return new Promise((resolve,reject) => {
@@ -81,6 +99,11 @@ var insertTags = function(tags){
     })
 }
 
+/**
+ * Insert PostId and tagId into post_tag table
+ * @param {int} postId 
+ * @param {int} tagIds 
+ */
 var insertPostTag = function(postId,tagIds){
     let postTag = []
     for(i = 0 ; i < tagIds.length ; i++){
