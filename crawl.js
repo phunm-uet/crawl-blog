@@ -10,7 +10,7 @@ const classListPost = ".td-block-span6 .entry-title a"
 const classBodyContent = ".td-post-content"
 const classRemove = ['.advads-adsense-responsive','.advads-adsense-top','.advads-adsense-mid1',
                     '.advads-adsense-mid2','.advads-adsense-mid3','.td-featured-image-rec',
-                    '.nc_socialPanel','.fb-comments','.advads-taboola-after']
+                    '.nc_socialPanel','.fb-comments','.advads-taboola-after','p comments-count']
 const CATE_ID = process.env.CATE_ID
 // Bat tu crawl tu page
 for(page = minPage; page <= maxPage; page++)

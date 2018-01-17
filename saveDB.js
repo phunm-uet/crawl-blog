@@ -95,7 +95,7 @@ var insertTags = function(tags){
         result.then((tagIds) => {
            return resolve(tagIds)
         })
-        .catch(err => {return reject(err)})
+        .catch(err => {return reject(err.sqlMessage)})
     })
 }
 
