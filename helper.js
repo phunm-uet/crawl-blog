@@ -30,7 +30,7 @@ var crawl = function(url,classBody,classRemove)
                 let tagSlug = slug(tagName)
                 tags.push({
                     "name" : tagName,
-                    "slug" : tagSlug,
+                    "slug" : tagSlug.toLowerCase(),
                     "user_id" : 1
                 })
             })
